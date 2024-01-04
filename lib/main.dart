@@ -38,8 +38,8 @@ class _LoginPageState extends State<LoginPage> {
 
   void _toggleButtonVisibility() {
     setState(() {
-      _isButtonVisible =
-          _usernameController.text.isNotEmpty && _passwordController.text.isNotEmpty;
+      _isButtonVisible = _usernameController.text.isNotEmpty &&
+          _passwordController.text.isNotEmpty;
     });
   }
 
@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
       // Show an error message or handle authentication failure
       print('Login failed. Please check your credentials.');
     }
-  }
+  } //hi
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +85,7 @@ class _LoginPageState extends State<LoginPage> {
               child: TextField(
                 controller: _passwordController,
                 obscureText: true,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                   labelText: 'Password',
                 ),
